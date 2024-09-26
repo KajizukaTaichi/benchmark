@@ -12,16 +12,16 @@ def execute_command(command):
     return stdout, stderr, return_code, execution_time
 
 def get_memory_usage():
-    return psutil.Process().memory_info().rss / 1024 
+    return psutil.Process().memory_info().rss / 1024
 
 def benchmark(name, command):
 
     # Execute the command
     stdout, stderr, return_code, execution_time = execute_command(command)
-    
+
     # Get memory usage after command execution
     memory_usage = get_memory_usage()
-    
+
     print(f"Benchmark of {name}")
 
     print("Return Code:", return_code)
@@ -30,4 +30,4 @@ def benchmark(name, command):
 
 if __name__ == "__main__":
     benchmark("Stack", ["stack", "test.stk"])
-    benchmark("Python", ["python", "test.py"])
+    benchmark("Stack++", ["stackpp", "test.spp"])

@@ -1,0 +1,21 @@
+0 i var
+(
+    i 1 add (i) var
+    (
+        (FizzBuzz ) print
+    ) (
+        (
+            (Fizz ) print
+        ) (
+            (
+                (Buzz ) print
+            ) (
+                i ( ) concat print
+            )
+            i 5 mod 0 equal if
+        )
+        i 3 mod 0 equal if
+    )
+    i 15 mod 0 equal if
+)
+(i 100 100 mul less) while
